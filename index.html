@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Menu de comida</title>
+</head>
+<div id="container"></div>
+
+<body>
+  <div class="menu">
+    <form action="javascript:void(0);" class="menus" id="polloForm">
+      <h1 class="tittle">Menu de Restaurante</h1>
+      <div>
+        <div class="card">
+          <img src="img/descarga.jpg">
+          <h4>COMBO 1</h4>
+          <p>tres piezas de pollo, ensalada, papas fritas y bebida grande de su elección</p>
+          <h4>Costo: $7.25</h4>
+          <input type="radio" id="contactChoice1" name="size" value="7.25" required>
+        </div>
+
+        <div class="card">
+          <img src="img/images.jpg">
+          <h4>COMBO 2</h4>
+          <p>dos piezas de pollo, papa frita y bebida mediana</p>
+          <h4>Costo: $5.75</h4>
+          <input type="radio" id="contactChoice2" name="size" value="5.75" required>
+        </div>
+
+        <div class="card">
+          <img src="img/images (1).jpg">
+          <h4>COMBO 3</h4>
+          <p>1 pieza de pollo, papas fritas y una bebida pequeña </p>
+          <h4>Costo: $3.50</h4>
+          <input type="radio" id="contactChoice3" name="size" value="3.50" required>
+          <input type="hidden" name="sz_tot" value="0.00" />
+        </div>
+
+        <div class="cantidad">
+          <h3>Cantidad de combos a comprar</h3>
+          <h4>(maximo 10 combos)</h4>
+          <input type="number" id="canti" name="cant" min="1" max="10" required>
+        </div>
+
+      </div>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Extra</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Ensalada </td>
+            <td>1.50</td>
+          </tr>
+          <tr>
+            <td>Papa frita</td>
+            <td>1.25</td>
+          </tr>
+          <tr>
+            <td>Pieza de pollo grande</td>
+            <td>1.75</td>
+          </tr>
+          <tr>
+            <td>Pieza de pollo mediana </td>
+            <td>1.50</td>
+          </tr>
+          <tr>
+            <td>Pieza de pollo pequeña </td>
+            <td>1.25</td>
+          </tr>
+          <tr>
+            <td>Bebida grande</td>
+            <td>1.50</td>
+          </tr>
+          <tr>
+            <td>Bebida mediana</td>
+            <td>1.25</td>
+          </tr>
+          <tr>
+            <td>Bebida pequeña </td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <td>Café </td>
+            <td>0.50</td>
+          </tr>
+          <tr>
+            <td>Postre</td>
+            <td>1.25</td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="acompañantes" id="complementoCombo">
+        <label><input type="checkbox" name="ensalada" value="1.50" />Ensalada</label>
+        <label><input type="checkbox" name="papas" value="1.25" />Papas Fritas</label>
+        <label><input type="checkbox" name="piezaGrande" value="1.75" />Pieza de pollo grande </label>
+        <label><input type="checkbox" name="piezaMediana" value="1.50" />Pieza de pollo media</label>
+        <label><input type="checkbox" name="piezaPequeña" value="1.25" />Pieza de pollo pequeña</label>
+        <label><input type="checkbox" name="bebidaGrande" value="1.50" />Bebida grande</label>
+        <label><input type="checkbox" name="bebidaMediana" value="1.25" />Bebida mediana</label>
+        <label><input type="checkbox" name="bebidaPequeña" value="1.25" />Bebida pequeña</label>
+        <label><input type="checkbox" name="cafe" value="0.50" />Café</label>
+        <label><input type="checkbox" name="postre" value="1.25" />Postre</label>
+        <input type="hidden" name="tops_tot" value="0.00" />
+      </div>
+      <div class="total">
+        <input type="hidden" name="sub_tot" value="0.00" />
+        <label>
+          Total: $<input type="text" name="total" class="num" value="0.00" readonly="readonly" />
+        </label>
+        <input type="submit" class="total" name="Submit" onclick="generarfactura()" />
+      </div>
+
+</body>
+<script src="js/MenuPollo.js"></script>
+
+</html>
